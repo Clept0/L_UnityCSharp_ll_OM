@@ -9,8 +9,6 @@ public class EnemyManager : MonoBehaviour
 
     void Update()
     {
-       
-
         if (Input.GetKeyDown(KeyCode.C))
         {
             if (Enemys.Count > 0)
@@ -19,12 +17,6 @@ public class EnemyManager : MonoBehaviour
                 ColorChange(nextEnemy);
                 Enemys.Enqueue(nextEnemy);
             }
-            /*
-            foreach (GameObject enemy in Enemys)
-            {
-                ColorChange(enemy);
-            }
-            */
         }
     }
 

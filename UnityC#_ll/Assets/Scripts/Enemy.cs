@@ -11,12 +11,6 @@ public class Enemy : MonoBehaviour
         enemyManager = FindObjectOfType<EnemyManager>();
         enemyManager.Enemys.Enqueue(gameObject);
 
-        print(enemyManager.Enemys.Count);
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        print($"Anzahl der momentanen Enemys: {enemyManager.Enemys.Count}");
     }
 }

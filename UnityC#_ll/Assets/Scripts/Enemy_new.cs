@@ -5,7 +5,7 @@ using UnityEngine;
 public class Enemy_new : MonoBehaviour
 {
 
-    private static Queue<GameObject> Enemys = new Queue<GameObject>();
+    public static Queue<GameObject> Enemys = new Queue<GameObject>();
 
 
     void Start()
@@ -16,20 +16,7 @@ public class Enemy_new : MonoBehaviour
         print($"Anzahl der momentanen Enemys: {Enemys.Count}");
     }
 
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.C))
-        {
-            if (Enemys.Count > 0)
-            {
-                GameObject nextEnemy = Enemys.Dequeue();
-                ColorChange(nextEnemy);
-                Enemys.Enqueue(nextEnemy);
-            }
-        }
-    }
-
-    private void ColorChange(GameObject enemy)
+    public static void ColorChange(GameObject enemy)
     {
         enemy.gameObject.GetComponent<MeshRenderer>().material.color = Random.ColorHSV();
     }

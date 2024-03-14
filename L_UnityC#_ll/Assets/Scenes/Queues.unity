@@ -436,6 +436,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnRange: 5
+  poolSize: 500000
 --- !u!1 &832575517
 GameObject:
   m_ObjectHideFlags: 0

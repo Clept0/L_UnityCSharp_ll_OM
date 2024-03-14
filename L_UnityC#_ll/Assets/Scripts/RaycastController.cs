@@ -25,7 +25,7 @@ public class RaycastController : MonoBehaviour
                 Debug.Log($"Objektname: {hit.collider.gameObject.name}, Position: {hit.transform.position}");
 
                 // Visualisiere den Ray im Editor
-                Debug.DrawLine(ray.origin, hit.point, Color.red, 100f);
+                Debug.DrawLine(ray.origin, hit.point, Color.red, 1f);
             }
         }
     }

@@ -9,6 +9,7 @@ public class Loading : MonoBehaviour
     [SerializeField] private Slider slider;
     [SerializeField] private string levelToLoad;
     [SerializeField] private GameObject LoadingScreen;
+    [SerializeField] private GameObject LoadingButton;
 
     public void LoadLevel()
     {
@@ -18,6 +19,7 @@ public class Loading : MonoBehaviour
     IEnumerator LoadLevelAsync(string levelToLoad)
     {
         LoadingScreen.SetActive(true);
+        LoadingButton.SetActive(false);
         AsyncOperation loadOperation = SceneManager.LoadSceneAsync(levelToLoad);
 
         while (!loadOperation.isDone)

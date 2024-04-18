@@ -20,6 +20,8 @@ public class EnemyManager : MonoBehaviour
         }
     }
 
+   
+
     private void ColorChange(GameObject enemy)
     {
         enemy.gameObject.GetComponent<MeshRenderer>().material.color = Random.ColorHSV();

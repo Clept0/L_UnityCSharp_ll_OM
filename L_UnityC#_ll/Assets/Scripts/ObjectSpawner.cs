@@ -44,7 +44,7 @@ public class ObjectSpawner : MonoBehaviour
         }
     }
 
-    private void SpawnObjectFromPool()
+    public void SpawnObjectFromPool()
     {
         if (objectPool.Count > 0)
         {

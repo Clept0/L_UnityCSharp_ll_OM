@@ -133,6 +133,7 @@ GameObject:
   m_Component:
   - component: {fileID: 96704670}
   - component: {fileID: 96704671}
+  - component: {fileID: 96704672}
   m_Layer: 0
   m_Name: SaveManager
   m_TagString: Untagged
@@ -162,11 +163,24 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 96704668}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a340a11063dde4b6f8c20328b49fda8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &96704672
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 96704668}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb8e968e7e5094f27830347a13f67557, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  encryptionKey: "einfacherSchl\xFCssel"
 --- !u!1 &213214469
 GameObject:
   m_ObjectHideFlags: 0
@@ -489,8 +503,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 96704671}
-        m_TargetAssemblyTypeName: JSONColorSave, Assembly-CSharp
+      - m_Target: {fileID: 96704672}
+        m_TargetAssemblyTypeName: JSONColorSave_XOR, Assembly-CSharp
         m_MethodName: LoadData
         m_Mode: 1
         m_Arguments:
@@ -1183,8 +1197,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 96704671}
-        m_TargetAssemblyTypeName: JSONColorSave, Assembly-CSharp
+      - m_Target: {fileID: 96704672}
+        m_TargetAssemblyTypeName: JSONColorSave_XOR, Assembly-CSharp
         m_MethodName: SaveData
         m_Mode: 1
         m_Arguments:
@@ -1450,8 +1464,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 96704671}
-        m_TargetAssemblyTypeName: JSONColorSave, Assembly-CSharp
+      - m_Target: {fileID: 96704672}
+        m_TargetAssemblyTypeName: JSONColorSave_XOR, Assembly-CSharp
         m_MethodName: ChangerColor
         m_Mode: 1
         m_Arguments:
